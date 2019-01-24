@@ -2,7 +2,10 @@ import React from 'react';
 
 const About = () =>{
   return(
-    <h1>About Us</h1>
+    <div className='container' style={{color:'#fff', marginTop:100, height:'80vh'}}>
+      <h1 className='text-center'>About Us</h1>
+      <p className='text-center'>Coming Soon</p>
+    </div>
   );
 };
 

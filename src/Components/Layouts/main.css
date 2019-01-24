@@ -13,3 +13,16 @@
 .title{
   margin-top:200px;
 }
+body{
+  background-color:#1f232c;
+}
+.calendar{
+  background-color:white;
+}
+.card{
+  background-color:#c7c9c8;
+  color:#333;
+}
+.fab{
+  color:#fc0100;
+}

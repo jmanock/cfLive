@@ -5,8 +5,11 @@ import moment from 'moment';
 import oneSevenTeen from '../../Images/1:17.mp4';
 import oneTen from '../../Images/1:10.mp4';
 import twelveTwentySeven from '../../Images/12:27.mp4';
+import Ad from '../../Images/ad.gif';
 
 const localizer = BigCalendar.momentLocalizer(moment);
+
+const ad = <a href='mailto:jonmanock@gmail.com'><img src={Ad} alt='Your Ad Here' style={{height:100, width:'75%', marginLeft:20}}></img></a>;
 
 let navigate = {
   PREVIOUS:'PREV',
@@ -17,7 +20,8 @@ let navigate = {
 
 let events = [
   {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)},
-  {title:'Bike Night', start:new Date(2019,0,24), end:new Date(2019,0,24), time:'7:30pm'}
+  {title:'Bike Night', start:new Date(2019,0,24), end:new Date(2019,0,24), time:'7:30pm'},
+  {title:ad, start:new Date(2018,11,30), end:new Date(2019,0,1)}
 ];
 
 function Event({event}){
@@ -53,15 +57,14 @@ class CustomToolbar extends Component{
 
 const Calendar = props =>{
   return(
-    <div>
+    <div className='calendar'>
       <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={props.calendarIsOpen ? 'open':''} components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => {
-          let newStyle={backgroundColor:'red'};
-          if(event.title === 'something'){
+          let newStyle={backgroundColor:'#fc0100'};
+          if(event.title === ad){
             newStyle={backgroundColor:'transparent'}
           }
           return {className:'', style:newStyle}
         }}/>
-      <h3 style={{color:'#fff'}} className='text-center'>Coming Soon</h3>
     </div>
   );
 }
@@ -69,23 +72,39 @@ const Calendar = props =>{
 const Bikes = () =>{
   return(
     <div className='container'>
-      <h1 className='text-center' style={{marginTop:100}}>Bikes TV</h1>
-      <Calendar />
-        <h3 className='text-center'>Past Shows</h3>
-        <div className='row'>
-          <div className='col-sm text-center'>1/17/2019</div>
-          <div className='col-sm text-center'>1/10/2019</div>
-          <div className='col-sm text-center'>12/27/2018</div>
+      <h1 className='text-center' style={{marginTop:100,color:'#fff'}}>CycleFeverTV</h1>
+      <div className='card'>
+        <div className='card-body'>
+          <p className='card-text text-center'>This is the place for all things motorcycle's</p>
+          <p className='card-text text-center'><a href='mailto:jonmanock@gmail.com'>Have a motorcycle event, meetup, rally let us know and we will add it to our calendar</a> </p>
         </div>
+      </div>
+      <Calendar />
+        <h3 className='text-center' style={{color:'#fff'}}>Past Shows</h3>
         <div className='row'>
           <div className='col-sm'>
-            <video style={{width:275}} src={oneSevenTeen} controls />
+            <div className='card'>
+              <div className='card-body'>
+                <h5 className='card-title text-center'>1/17/2019</h5>
+                <video src={oneSevenTeen} className='card-img' controls />
+              </div>
+            </div>
           </div>
           <div className='col-sm'>
-            <video style={{width:275}} src={oneTen} controls />
+            <div className='card'>
+              <div className='card-body'>
+                <h5 className='card-title text-center'>1/10/2019</h5>
+                <video src={oneTen} controls  className='card-img'/>
+              </div>
+            </div>
           </div>
           <div className='col-sm'>
-            <video style={{width:275}} src={twelveTwentySeven} controls />
+            <div className='card'>
+              <div className='card-body'>
+                <h5 className='card-title text-center'>12/27/2018</h5>
+                <video src={twelveTwentySeven} className='card-img' controls />
+              </div>
+            </div>
           </div>
         </div>
     </div>

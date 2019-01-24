@@ -2,8 +2,11 @@ import React,{Component} from 'react';
 import BigCalendar from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
+import Ad from '../../Images/ad.gif';
 
 const localizer = BigCalendar.momentLocalizer(moment);
+
+const ad = <a href='mailto:jonmanock@gmail.com'><img src={Ad} alt='Your Ad Here' style={{height:100, width:'75%', marginLeft:20}}></img></a>;
 
 let navigate = {
   PREVIOUS:'PREV',
@@ -13,7 +16,8 @@ let navigate = {
 };
 
 let events = [
-  {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)}
+  {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)},
+  {title:ad, start:new Date(2018,11,30), end:new Date(2019,0,1)}
 ];
 
 const something = (x) =>{
@@ -52,10 +56,10 @@ class CustomToolbar extends Component{
 
 const Calendar = props =>{
   return(
-    <div>
+    <div className='calendar'>
       <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={props.calendarIsOpen ? 'open':''} components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => {
-          let newStyle={backgroundColor:'red'};
-          if(event.title === 'something'){
+          let newStyle={backgroundColor:'darkred'};
+          if(event.title === ad){
             newStyle={backgroundColor:'transparent'}
           }
           return {className:'', style:newStyle}
@@ -68,7 +72,7 @@ const Calendar = props =>{
 const SpecialEvents = () =>{
   return(
     <div className='container'>
-      <h1 className='text-center title'>Special Events</h1>
+      <h1 className='text-center' style={{color:'#fff', marginTop:100}}>Special Events</h1>
       <Calendar />
     </div>
   )
