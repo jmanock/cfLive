@@ -71,15 +71,25 @@ const Calendar = props =>{
 const Cars = () =>{
   return(
     <div className='container'>
-      <h1 className='text-center'>Cars TV</h1>
+      <h1 className='text-center' style={{marginTop:100}}>Cars TV</h1>
       <Calendar />
-        <div>
-          <h5>1/7</h5>
-          <video style={{width:300}} src={oneTwenty} controls />
+      <h3 className='text-center'>Past Shows</h3>
+      <div className='row'>
+        <div className='col-sm text-center'>1/20/2019</div>
+        <div className='col-sm text-center'>12/18/2018</div>
+        <div className='col-sm text-center'>11/19/2018</div>
+      </div>
+      <div className='row'>
+        <div className='col-sm'>
+          <video style={{width:275}} src={oneTwenty} controls />
         </div>
-
-        <video style={{width:300}} src={twelveEightTeen} controls />
-        <video style={{width:300}} src={elevenNineTeen} controls />
+        <div className='col-sm'>
+          <video style={{width:275}} src={twelveEightTeen} controls />
+        </div>
+        <div className='col-sm'>
+          <video style={{width:275}} src={elevenNineTeen} controls />
+        </div>
+      </div>
     </div>
   )
 }

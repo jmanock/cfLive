@@ -12,6 +12,15 @@ const Home = () =>{
           <h1 style={{fontSize:'2em', color:'#82b1ff'}} className='text-center'>Join the Adventure &amp; Enjoy the Ride.</h1>
         </div>
       </section>
+      <section>
+        <div className='container'>
+          <div className='card'>
+            <div className='card-body'>
+              <p className='card-text text-center'>Welcome to the New CFTV! Formally Cycle Fever Tv. </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className='live text-center' style={{marginTop:20}}>
         <h3>Watch Live</h3>
         <Youtube videoId='0eKtQb06Gw0'/>
@@ -20,7 +29,7 @@ const Home = () =>{
         <div className='container'>
           <div className='card'>
             <div className='card-body'>
-              <p className='card-text'>CFTV is a motorcycle, car, special events, travel show with some crazy hosts who want you to come along for the ride while they have fun and a few laughs! Join the Adventure &amp; Enjoy the Ride! </p>
+              <p className='card-text text-center'>CFTV is a motorcycle, car, special events, travel show with some crazy hosts who want you to come along for the ride while they have fun and a few laughs! Join the Adventure &amp; Enjoy the Ride! </p>
             </div>
           </div>
 
