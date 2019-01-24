@@ -1,0 +1,15 @@
+.intro{
+  background:url('../../Images/car.jpg') no-repeat center fixed;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-color:#1c120c;
+  background-attachment:fixed;
+  position:relative;
+  overflow:hidden;
+  height:100vh;
+}
+.title{
+  margin-top:150px;
+}
