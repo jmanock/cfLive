@@ -15,7 +15,7 @@ const Home = () =>{
 
       <section className='live text-center' style={{marginTop:20}}>
         <h3 style={{color:'#fff'}}>Watch Live</h3>
-        <Youtube videoId='0eKtQb06Gw0'/>
+        <Youtube videoId=''/>
       </section>
       <section className='agenda'>
         <div className='container'>
