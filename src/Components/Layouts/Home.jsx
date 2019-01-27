@@ -1,6 +1,5 @@
 import React from 'react';
 import './main.css';
-import Youtube from './Sections/Youtube';
 
 const Home = () =>{
   return(
@@ -14,9 +13,16 @@ const Home = () =>{
       </section>
 
       <section className='live text-center' style={{marginTop:20}}>
-        <h3 style={{color:'#fff'}}>Watch Live</h3>
-        <Youtube videoId='C1kyzgodUXQ'/>
+        <div className='card container' style={{backgroundColor:'transparent'}}>
+          <div className='card-body'>
+            <h3 className='card-title text-center' style={{color:'#fff'}}>Watch Live</h3>
+            <div className='embed-responsive embed-responsive-21by9'>
+              <iframe src="https://www.youtube.com/embed/C1kyzgodUXQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title='one24'></iframe>
+            </div>
+          </div>
+        </div>
       </section>
+
       <section className='agenda'>
         <div className='container'>
           <div className='card'>
