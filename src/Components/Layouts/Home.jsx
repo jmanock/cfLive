@@ -32,7 +32,7 @@ const Home = () =>{
             <h5 className='card-title text-center'>OFFERING VALUE <span style={{color:'#fc0100'}}>CFTV</span></h5>
             <ul className='list-group list-group-flush'>
               <li className='list-group-item'>CYCLE FEVER TV</li>
-              <li className='list-group-item'>CARS TV</li>
+              <li className='list-group-item'>CAR FEVER TV</li>
               <li className='list-group-item'>SMALL TOWN AMERICA TV</li>
               <li className='list-group-item'>ROLLING MEDIA CHANNEL</li>
             </ul>

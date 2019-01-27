@@ -2,14 +2,11 @@ import React,{Component} from 'react';
 import BigCalendar from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
-import oneTwenty from '../../Images/1:20.mp4';
-import twelveEightTeen from '../../Images/12:18.mp4';
-import elevenNineTeen from '../../Images/11:19.mp4';
 import Ad from '../../Images/ad.gif';
 
 const localizer = BigCalendar.momentLocalizer(moment);
 
-const ad = <a href='mailto:jonmanock@gmail.com'><img src={Ad} alt='Your Ad Here' style={{height:100, width:'75%', marginLeft:20}}></img></a>;
+const ad = <a href='mailto:cftv@email.com'><img src={Ad} alt='Your Ad Here' style={{height:100, width:'75%', marginLeft:20}}></img></a>;
 
 let navigate = {
   PREVIOUS:'PREV',
@@ -74,37 +71,46 @@ const Calendar = props =>{
 const Cars = () =>{
   return(
     <div className='container'>
-      <h1 className='text-center' style={{marginTop:100,color:'#fff'}}>Cars TV</h1>
+      <h1 className='text-center' style={{marginTop:100,color:'#fff'}}>CarFeverTV</h1>
       <div className='card'>
         <div className='card-body'>
           <p className='card-text text-center'>A place for everything Cars! </p>
-          <p className='card-text text-center'><a href='mailto:jonmanock@gmail.com'>Have a car event, meetup, rally let us know and we will add it to our calendar</a> </p>
+          <p className='card-text text-center'><a href='mailto:cftv@email.com'>Have a car event, meetup, rally let us know and we will add it to our calendar</a> </p>
         </div>
       </div>
       <Calendar />
-      <h3 className='text-center'style={{color:'#fff'}}>Past Shows</h3>
+      <h3 className='text-center' style={{color:'#fff'}}>Past Shows</h3>
       <div className='row'>
+
         <div className='col-sm'>
           <div className='card'>
             <div className='card-body'>
-              <h5 className='card-title text-center'>1/20/2019</h5>
-              <video src={oneTwenty} controls className='card-img'/>
+              <h5 className='card-title text-center'>1-21-2019</h5>
+              <div className='embed-responsive embed-responsive-21by9'>
+                <iframe src="https://www.youtube.com/embed/dNZjsk7Fkxw"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title='one21'></iframe>
+              </div>
             </div>
           </div>
         </div>
+
         <div className='col-sm'>
           <div className='card'>
             <div className='card-body'>
-              <h5 className='card-title text-center'>12/18/2018</h5>
-              <video src={twelveEightTeen} controls className='card-img' />
+              <h5 className='card-title text-center'>12-17-2018</h5>
+              <div className='embed-responsive embed-responsive-21by9'>
+                <iframe src="https://www.youtube.com/embed/J6FWUX1XlJA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title='twelve17'></iframe>
+              </div>
             </div>
           </div>
         </div>
+
         <div className='col-sm'>
           <div className='card'>
             <div className='card-body'>
-              <h5 className='card-title text-center'>11/19/2018</h5>
-              <video src={elevenNineTeen} controls className='card-img'/>
+              <h5 className='card-title text-center'>11-19-2018</h5>
+              <div className='embed-responsive embed-responsive-21by9'>
+                <iframe src="https://www.youtube.com/embed/-ssT3Fpm-lo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title='eleven19'></iframe>
+              </div>
             </div>
           </div>
         </div>

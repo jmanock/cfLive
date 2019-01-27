@@ -10,8 +10,8 @@ const Navbar = () =>{
       </button>
       <div className='collapse navbar-collapse' id='navbarSupportedContent'>
         <ul className='navbar-nav mr-auto'>
-          <li className='nav-item'><Link to='/Cars' className='nav-link'>CarsTV</Link></li>
-          <li className='nav-item'><Link to='/Bikes' className='nav-link'>CycleFeverTV</Link></li>
+          <li className='nav-item'><Link to='/CarFeverTV' className='nav-link'>CarFeverTV</Link></li>
+          <li className='nav-item'><Link to='/CycleFeverTV' className='nav-link'>CycleFeverTV</Link></li>
           <li className='nav-item'><Link to='/RollingMediaChannel' className='nav-link'>Rolling Media Channel</Link></li>
           <li className='nav-item'><Link to='/SmallTownAmerica' className='nav-link'>Small Town America TV</Link></li>
           <li className='nav-item'><Link to='/SpecialEvents' className='nav-link'>Special Events</Link></li>

@@ -7,9 +7,8 @@ class Youtube extends Component{
   }
 
   render(){
+
     const opts = {
-      height:'500px',
-      width:'90%',
       playerVars:{
         autoplay:0
       }

@@ -6,7 +6,7 @@ import Ad from '../../Images/ad.gif';
 
 const localizer = BigCalendar.momentLocalizer(moment);
 
-const ad = <a href='mailto:jonmanock@gmail.com'><img src={Ad} alt='Your Ad Here' style={{height:100, width:'75%', marginLeft:20}}></img></a>;
+const ad = <a href='mailto:cftv@email.com'><img src={Ad} alt='Your Ad Here' style={{height:100, width:'75%', marginLeft:20}}></img></a>;
 
 let navigate = {
   PREVIOUS:'PREV',
