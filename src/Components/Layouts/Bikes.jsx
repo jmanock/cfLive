@@ -17,6 +17,7 @@ let navigate = {
 
 let events = [
   {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)},
+  {title:'Something Else', start:new Date(2019,1,4), end:new Date(2019,1,4)},
   {title:'Bike Night', start:new Date(2019,0,24), end:new Date(2019,0,24), time:'7:30pm'},
   {title:ad, start:new Date(2018,11,30), end:new Date(2019,0,1)},
   {title:'VEMA Bike Night', start:new Date(2019,1,4), end:new Date(2019,1,4), time:'6:00pm'},
@@ -36,7 +37,6 @@ function Event({event}){
 class CustomToolbar extends Component{
   render(){
     let {localizer:{message}, label} = this.props;
-
     return(
       <div className='rbc-toolbar'>
         <span className='rbc-btn-group'>
@@ -56,9 +56,21 @@ class CustomToolbar extends Component{
 }
 
 const Calendar = props =>{
+  const ShowEvent = event =>{
+    return(
+      <div className='popup'>
+        <div className='popup_inner'>
+          <h1>{event.title}</h1>
+          
+        </div>
+      </div>
+    )
+  }
   return(
     <div className='calendar'>
-      <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={props.calendarIsOpen ? 'open':''}  components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => {
+      <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={props.calendarIsOpen ? 'open':''}  components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => { if(isSelected === true){
+          ShowEvent(event)
+        }
           let newStyle={backgroundColor:'#fc0100'};
           if(event.title === ad){
             newStyle={backgroundColor:'transparent'}
