@@ -18,7 +18,10 @@ let navigate = {
 let events = [
   {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)},
   {title:'Bike Night', start:new Date(2019,0,24), end:new Date(2019,0,24), time:'7:30pm'},
-  {title:ad, start:new Date(2018,11,30), end:new Date(2019,0,1)}
+  {title:ad, start:new Date(2018,11,30), end:new Date(2019,0,1)},
+  {title:'VEMA Bike Night', start:new Date(2019,1,4), end:new Date(2019,1,4), time:'6:00pm'},
+  {title:'VEMA Bike Night', start:new Date(2019,2,4), end:new Date(2019,2,4),time:'6:00pm'},
+  {title:'VEMA Bike Night', start:new Date(2019,3,1), end:new Date(2019,3,1), time:'6:00pm'}
 ];
 
 function Event({event}){
@@ -55,7 +58,7 @@ class CustomToolbar extends Component{
 const Calendar = props =>{
   return(
     <div className='calendar'>
-      <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={props.calendarIsOpen ? 'open':''} components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => {
+      <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={props.calendarIsOpen ? 'open':''}  components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => {
           let newStyle={backgroundColor:'#fc0100'};
           if(event.title === ad){
             newStyle={backgroundColor:'transparent'}
