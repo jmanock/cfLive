@@ -61,7 +61,7 @@ const Calendar = props =>{
       <div className='popup'>
         <div className='popup_inner'>
           <h1>{event.title}</h1>
-          
+
         </div>
       </div>
     )

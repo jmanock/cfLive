@@ -2,11 +2,8 @@ import React,{Component} from 'react';
 import BigCalendar from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
-import Ad from '../../Images/ad.gif';
 
 const localizer = BigCalendar.momentLocalizer(moment);
-
-const ad = <a href='mailto:cftv@email.com'><img src={Ad} alt='Your Ad Here' style={{height:100, width:'75%', marginLeft:20}}></img></a>;
 
 let navigate = {
   PREVIOUS:'PREV',
@@ -15,18 +12,13 @@ let navigate = {
   DATE:'DATE'
 };
 
-let events = [
-  {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)},
-  {title:ad, start:new Date(2018,11,30), end:new Date(2019,0,1)}
+let events =[
+  {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)}
 ];
-
-const something = (x) =>{
-  console.log(x);
-}
 function Event({event}){
   return(
-    <span>
-      <strong className='eventTitle' onClick={something}>{event.title}</strong>
+    <span className='event'>
+      <strong className='eventTitle'>{event.title}</strong>
       <small className='eventTime'>{event.time}</small>
     </span>
   );
@@ -34,12 +26,11 @@ function Event({event}){
 
 class CustomToolbar extends Component{
   render(){
-    let {localizer:{message}, label} = this.props;
-
+    let {localizer:{message},label} = this.props;
     return(
       <div className='rbc-toolbar'>
         <span className='rbc-btn-group'>
-          <button type='button' onClick={this.navigate.bind(null, navigate.PREVIOUS)} className='icon'><i className='fas fa-chevron-left'></i></button>
+          <button type='button' onClick={this.navigate.bind(null,navigate.PREVIOUS)} className='icon'><i className='fas fa-chevron-left'></i></button>
         </span>
         <span className='rbc-toolbar-label'>{label} {message}</span>
         <span className='rbc-btn-group'>
@@ -48,33 +39,42 @@ class CustomToolbar extends Component{
       </div>
     );
   }
-
   navigate = action =>{
     this.props.onNavigate(action);
   }
 }
 
-const Calendar = props =>{
-  return(
-    <div className='calendar'>
-      <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={props.calendarIsOpen ? 'open':''} components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => {
-          let newStyle={backgroundColor:'darkred'};
-          if(event.title === ad){
-            newStyle={backgroundColor:'transparent'}
+class Calendar extends Component{
+  render(){
+    return(
+      <div className='calendar'>
+        <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={this.props.calendarIsOpen ? 'open' : ''} components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => { if (isSelected === true){
+            
           }
-          return {className:'', style:newStyle}
-        }}/>
-      <h3 style={{color:'#fff'}} className='text-center'>Coming Soon</h3>
-    </div>
-  );
+            let newStyle={backgroundColor:'darkred'};
+            if(event.title === 'ad'){
+              newStyle = {backgroundColor:'transparent'}
+            }
+            return {className:'', style:newStyle}
+          }}/>
+
+      </div>
+    )
+  }
 }
 
-const SpecialEvents = () =>{
-  return(
-    <div className='container'>
-      <h1 className='text-center' style={{color:'#fff', marginTop:100}}>Special Events</h1>
-      <Calendar />
-    </div>
-  )
+class SpecialEvents extends Component{
+  state={showPopup:false}
+
+  render(){
+
+    return(
+      <div className='container'>
+        <h1 className='text-center' style={{color:'#fff', marginTop:100}}>Special Events</h1>
+        <Calendar />
+      </div>
+    )
+  }
 }
+
 export default SpecialEvents;
