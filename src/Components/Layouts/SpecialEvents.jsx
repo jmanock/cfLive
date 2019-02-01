@@ -13,7 +13,8 @@ let navigate = {
 };
 
 let events =[
-  {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)}
+  {title:'Happy New Year', start:new Date(2019,0,1), end:new Date(2019,0,1)},
+  {title:'Bike Night', start:new Date(2019,1,4), end:new Date(2019,1,4)}
 ];
 function Event({event}){
   return(
@@ -45,12 +46,14 @@ class CustomToolbar extends Component{
 }
 
 class Calendar extends Component{
+  state = {showPopUp:false}
   render(){
     return(
       <div className='calendar'>
-        <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={this.props.calendarIsOpen ? 'open' : ''} components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => { if (isSelected === true){
-            
-          }
+        <BigCalendar localizer={localizer} events={events} popup startAccessor='start' endAccessor='end' className={this.props.calendarIsOpen ? 'open' : ''} components={{event:Event, toolbar:CustomToolbar}} style={{height:'100vh'}} eventPropGetter={(event, start, end, isSelected) => {
+            if(this.state.showPopUp){
+              console.log('hi');
+            }
             let newStyle={backgroundColor:'darkred'};
             if(event.title === 'ad'){
               newStyle = {backgroundColor:'transparent'}
@@ -64,14 +67,13 @@ class Calendar extends Component{
 }
 
 class SpecialEvents extends Component{
-  state={showPopup:false}
-
   render(){
 
     return(
       <div className='container'>
         <h1 className='text-center' style={{color:'#fff', marginTop:100}}>Special Events</h1>
         <Calendar />
+        <div id='something' style={{fontSize:100, color:'#fff'}}></div>
       </div>
     )
   }
