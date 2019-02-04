@@ -151,7 +151,7 @@ class Events extends Component{
 }
 
 Events.defaultProps = {
-  daysOfTheWeek:['Sunday', 'Monday', 'Tuesday', 'Thursday', 'Wednesday', 'Friday', 'Saturday'],
+  daysOfTheWeek:['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
   events:[],
   wrapTitle:true,
   maxEventSlots:10
