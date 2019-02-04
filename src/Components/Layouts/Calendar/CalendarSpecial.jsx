@@ -4,7 +4,7 @@ import moment from 'moment';
 import Data from './Data';
 import {Row, Button, ButtonGroup, Overlay, Popover, Modal, Container} from 'react-bootstrap';
 
-class CalendarBike extends Component{
+class CalendarSpecial extends Component{
   state ={
     moment:moment(),
     showPopover:false,
@@ -84,7 +84,7 @@ class CalendarBike extends Component{
               <h1 style={{color:'#fff',marginLeft:20, marginRight:20}}>{this.getHumanDate()}</h1>
               <Button variant='secondary' onClick={this.handleNextMonth}>&gt;</Button>
             </ButtonGroup>
-            <Events month={this.state.moment.month()} year={this.state.moment.year()} events={Data.getEvents()} onEventClick={this.handleEventClick} maxEventSlots={10} />
+            <Events month={this.state.moment.month()} year={this.state.moment.year()} events={Data.getSpecialEvents()} onEventClick={this.handleEventClick} maxEventSlots={10} />
           </Row>
         </Container>
       </div>
@@ -92,4 +92,4 @@ class CalendarBike extends Component{
   }
 }
 
-export default CalendarBike;
+export default CalendarSpecial;
