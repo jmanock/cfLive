@@ -2,9 +2,9 @@ import React,{Component} from 'react';
 import Events from './Events';
 import moment from 'moment';
 import Data from './Data';
-import {Row, Col, Button, ButtonToolbar, Overlay, Popover, Modal, Container} from 'react-bootstrap';
+import {Row, Button, ButtonGroup, Overlay, Popover, Modal, Container} from 'react-bootstrap';
 
-class Calendar extends Component{
+class CalendarBike extends Component{
   state ={
     moment:moment(),
     showPopover:false,
@@ -61,7 +61,7 @@ class Calendar extends Component{
 
   render(){
     return(
-      <div className='container'>
+      <div>
         <Overlay show={this.state.showPopover} rootClose onHide={()=>this.setState({showPopover:false})} placement='top' container={this} target={this.state.popoverTarget}>
           <Popover id='event'>{this.state.overlayTitle}</Popover>
         </Overlay>
@@ -71,7 +71,7 @@ class Calendar extends Component{
             <Modal.Title>{this.state.overlayTitle}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {this.state.overlayContent}
+            <a href={`${this.state.overlayContent}`} target='_blank' rel='noopener noreferrer'>{this.state.overlayContent}</a>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleModalClose}>Close</Button>
@@ -79,22 +79,12 @@ class Calendar extends Component{
         </Modal>
         <Container>
           <Row>
-            <Col xs={6}>
-              <ButtonToolbar>
-                <Button onClick={this.handlePreviousMonth}>&lt;</Button>
-                <Button onClick={this.handleNextMonth}>&gt;</Button>
-                <Button onClick={this.handleToday}>Today</Button>
-              </ButtonToolbar>
-            </Col>
-            <Col xs={6}>
-              <h1 className='text-center'>{this.getHumanDate()}</h1>
-            </Col>
-          </Row>
-          <br />
-          <Row>
-            <Col xs={12}>
-              <Events month={this.state.moment.month()} year={this.state.moment.year()} events={Data.getEvents()} onEventClick={this.handleEventClick} maxEventSlots={10} />
-            </Col>
+            <ButtonGroup style={{marginTop:100,marginBottom:-100}}>
+              <Button variant='secondary' onClick={this.handlePreviousMonth}>&lt;</Button>
+              <h1 style={{color:'#fff',marginLeft:20, marginRight:20}}>{this.getHumanDate()}</h1>
+              <Button variant='secondary' onClick={this.handleNextMonth}>&gt;</Button>
+            </ButtonGroup>
+            <Events month={this.state.moment.month()} year={this.state.moment.year()} events={Data.getEvents()} onEventClick={this.handleEventClick} maxEventSlots={10} />
           </Row>
         </Container>
       </div>
@@ -102,4 +92,4 @@ class Calendar extends Component{
   }
 }
 
-export default Calendar;
+export default CalendarBike;
