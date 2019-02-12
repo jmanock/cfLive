@@ -69,6 +69,10 @@ export default{
       {start:'2019-02-28', end:'2019-02-28', title:'Live Porsche & Mercedes Night @ The Ace', description:'CFTV is LIVE every 3rd Monday of the month for Porsche & Mercedes Night', where:'Ace Cafe', time:'6:00pm', link:'https://www.facebook.com/CycleFeverTV/'},
 
       {start:'2019-03-18', end:'2019-03-18', title:'Live Porsche & Mercedes Night @ The Ace', description:'CFTV is LIVE every 3rd Monday of the month for Porsche & Mercedes Night', where:'Ace Cafe', time:'6:00pm', link:'https://www.facebook.com/CycleFeverTV/'},
+
+      {start:'2019-02-24', end:'2019-02-24', title:'"Goodvibes" Cars for Cancer Charity Meet', description:'Local car enthusiast & founder of Dub Empire has been battling cancer for the past few years', where:'Castle Church Brewing', time:'1pm - 6pm', link:'https://www.facebook.com/events/458386924699589/'},
+
+      {start:'2019-04-06', end:'2019-04-06', title:'Vettes for Vets - Charity Corvette Night', description:'Car show open to ALL makes and Models, Motorcycles, Classic Cars, Hot Rods... come show off your wheels!', where:'Castle Church Brewing', time:'12pm - 12am', link:'https://www.facebook.com/events/1950110891768624/'}
     ];
     const events = eventMeta.map((data) =>{
       return{

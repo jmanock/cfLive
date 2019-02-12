@@ -18,9 +18,9 @@ const Bikes = () =>{
           <div className='col-sm'>
             <div className='card'>
               <div className='card-body'>
-                <h5 className='card-title text-center'>1-21-2019</h5>
+                <h5 className='card-title text-center'>2-4-2019</h5>
                 <div className='embed-responsive embed-responsive-21by9'>
-                  <iframe src='https://www.youtube.com/embed/dNZjsk7Fkxw' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='one21'></iframe>
+                  <iframe src="https://www.youtube.com/embed/LQPFeqo-yHA" allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='two4'></iframe>
                 </div>
               </div>
             </div>
@@ -29,9 +29,9 @@ const Bikes = () =>{
           <div className='col-sm'>
             <div className='card'>
               <div className='card-body'>
-                <h5 className='card-title text-center'>12-17-2018</h5>
+                <h5 className='card-title text-center'>1-24-2019</h5>
                 <div className='embed-responsive embed-responsive-21by9'>
-                  <iframe src='https://www.youtube.com/embed/J6FWUX1XlJA' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='twelve17'></iframe>
+                  <iframe src='https://www.youtube.com/embed/C1kyzgodUXQ' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='one24'></iframe>
                 </div>
               </div>
             </div>
@@ -40,13 +40,14 @@ const Bikes = () =>{
           <div className='col-sm'>
             <div className='card'>
               <div className='card-body'>
-                <h5 className='card-title text-center'>11-19-2018</h5>
+                <h5 className='card-title text-center'>1-17-2019</h5>
                 <div className='embed-responsive embed-responsive-21by9'>
-                  <iframe src='https://www.youtube.com/embed/-ssT3Fpm-lo' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='one10'></iframe>
+                  <iframe src='https://www.youtube.com/embed/EpuATt1jUy0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='one17'></iframe>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ const Footer = () =>(
     <ul className='nav justify-content-center'>
       <li className='nav-link'>&copy;2019 <span style={{color:'#fc0100'}}>CFTV</span></li>
       <li className='nav-item'>
-        <a href='https://www.facebook.com/CycleFeverTv/' className='nav-link'><i className='fab fa-facebook-f'></i></a>
+        <a href='https://www.facebook.com/cftv.live19' className='nav-link'><i className='fab fa-facebook-f'></i></a>
       </li>
       <li className='nav-item'>
          <a href='https://twitter.com/CycleFeverTV' className='nav-link'><i className='fab fa-twitter'></i></a>
