@@ -17,7 +17,8 @@ const Home = () =>{
           <div className='card-body'>
             <h3 className='card-title text-center' style={{color:'#fff'}}>Watch Live</h3>
             <div className='embed-responsive embed-responsive-21by9'>
-              <iframe src="https://www.youtube.com/embed/LQPFeqo-yHA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title='one24'></iframe>
+              <iframe src="https://www.youtube.com/embed/24xjxcIliKw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title='one24'></iframe>
+              
             </div>
           </div>
         </div>
