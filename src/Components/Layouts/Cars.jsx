@@ -16,6 +16,18 @@ const Cars = () =>{
         <h3 className='text-center' style={{color:'#fff'}}>Past Shows</h3>
 
         <div className='row'>
+
+          <div className='col-sm'>
+            <div className='card'>
+              <div className='card-body'>
+                <h5 className='card-title text-center'>2-18-2019</h5>
+                <div className='embed-responsive embed-responsive-21by9'>
+                  <iframe src='https://www.youtube.com/embed/UxwGlBtb4ik' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='one10'></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className='col-sm'>
             <div className='card'>
               <div className='card-body'>
@@ -38,16 +50,6 @@ const Cars = () =>{
             </div>
           </div>
 
-          <div className='col-sm'>
-            <div className='card'>
-              <div className='card-body'>
-                <h5 className='card-title text-center'>11-19-2018</h5>
-                <div className='embed-responsive embed-responsive-21by9'>
-                  <iframe src='https://www.youtube.com/embed/-ssT3Fpm-lo' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='one10'></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

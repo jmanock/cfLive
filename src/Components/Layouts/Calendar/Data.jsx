@@ -26,6 +26,13 @@ export default{
 
       {start:'2019-06-03', end:'2019-06-03', title:'VEMA Bike Night', link:'https://www.facebook.com/events/313173569308217', description:'Veteran Enforcers Motorcycle Association (VEMA) rides with charities that support our local community. Their motto says it all "Riding for those who saw more!"', time:'6:00pm', where:'Castle Church Brewing'},
 
+      {start:'2019-03-09', end:'2019-03-09', title:'DeLand Bike Rally', link:'https://www.facebook.com/events/2274905852835051/', description:'Come out and visit Horses 2 Harleys to get all your riding attire at the DeLand Bike Rally.', time:'10:00am - 7:00pm', where:'Downtown DeLand historic District'},
+
+      {start:'2019-03-13', end:'2019-03-17', title:'Orlando Bike Week', link:'https://www.facebook.com/photo.php?fbid=10161362656005006&set=a.126863725005&type=3&theater', description:'Meet TV Cast Memebers from MOONSHINERS, Live Bands, Stunt Crews,', time:'10:00am - 7:00pm', where:'Orlando Harley-Davidson South'},
+
+      {start:'2019-03-10', end:'2019-03-10', title:"Central Florida's 2nd Annual Wounded Vet Run", description:'Benefiting Wounded Veteran: PATRICK WICKENS', link:'https://www.facebook.com/photo.php?fbid=575015412967045&set=a.133906170411307&type=3&theater', time:'12:00pm', where:'Horsepower Ranch'},
+
+      {start:'2019-09-21', end:'2019-09-21', title:'15th Annuall USO Motorcycle Benefit Ride', link:'https://www.facebook.com/events/272753123581814/', description:'To show the men and women in our Armed Forces that the Central Florida Motorcycle Community has not forgotten their sacrifce and thank them for the job they do by supporting the USO.', where:'Orlando Harley-Davidson South', time:'8:30am - 3:00pm'}
     ];
     const events = eventMeta.map((data) =>{
       return{
@@ -66,9 +73,9 @@ export default{
 
       {start:'2019-12-09', end:'2019-12-09', title:'Storm the Castle for Car & Bike Night!', description:'Free Entrance, Free Parking, Free Food, Drink Specials, incredible prizes, Cars, Bikes & Awesome People', where:'Castle Church Brewing', time:'6:00pm', link:'https://www.facebook.com/events/1010450619140654/'},
 
-      {start:'2019-02-28', end:'2019-02-28', title:'Live Porsche & Mercedes Night @ The Ace', description:'CFTV is LIVE every 3rd Monday of the month for Porsche & Mercedes Night', where:'Ace Cafe', time:'6:00pm', link:'https://www.facebook.com/CycleFeverTV/'},
-
       {start:'2019-03-18', end:'2019-03-18', title:'Live Porsche & Mercedes Night @ The Ace', description:'CFTV is LIVE every 3rd Monday of the month for Porsche & Mercedes Night', where:'Ace Cafe', time:'6:00pm', link:'https://www.facebook.com/CycleFeverTV/'},
+
+      {start:'2019-02-18', end:'2019-02-18', title:'Live Porsche & Mercedes Night @ The Ace', description:'CFTV is LIVE every 3rd Monday of the month for Porsche & Mercedes Night', where:'Ace Cafe', time:'6:00pm', link:'https://www.facebook.com/CycleFeverTV/'},
 
       {start:'2019-02-24', end:'2019-02-24', title:'"Goodvibes" Cars for Cancer Charity Meet', description:'Local car enthusiast & founder of Dub Empire has been battling cancer for the past few years', where:'Castle Church Brewing', time:'1pm - 6pm', link:'https://www.facebook.com/events/458386924699589/'},
 
