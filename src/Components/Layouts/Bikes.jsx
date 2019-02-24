@@ -19,6 +19,20 @@ const Bikes = () =>{
           <div className='col-sm'>
             <div className='card'>
               <div className='card-body'>
+                <h5 className='card-title text-center'>1-10-2019</h5>
+                <div className='embed-responsive embed-responsive-21by9'>
+                  <video controls>
+                    <source src='https://firebasestorage.googleapis.com/v0/b/cftv-fd2b9.appspot.com/o/CFTV1-10.mp4?alt=media&token=19433884-f986-4be0-9f66-6f6043089fda' alt='show 1-10-2019'/>
+                  </video>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div className='col-sm'>
+            <div className='card'>
+              <div className='card-body'>
                 <h5 className='card-title text-center'>2-14-2019</h5>
                 <div className='embed-responsive embed-responsive-21by9'>
                   <iframe src='https://www.youtube.com/embed/XFGtXA-sHEY' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen title='one17'></iframe>
