@@ -105,7 +105,7 @@ export default{
   },
   getSpecialEvents:() =>{
     const eventMeta = [
-
+      
     ];
     const events = eventMeta.map((data) =>{
       return{
@@ -118,6 +118,7 @@ export default{
         time:data.time,
         where:data.where
       }
-    })
+    });
+    return events;
   }
 }

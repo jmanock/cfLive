@@ -4,9 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/src/Components/Layouts/Firebase
 # testing
 /coverage
+
 
 # production
 /build
