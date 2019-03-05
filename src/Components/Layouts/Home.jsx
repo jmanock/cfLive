@@ -2,6 +2,7 @@ import React from 'react';
 import './main.css';
 
 const Home = () =>{
+  const video = 'https://www.youtube.com/embed/uiqCu9_Hv6s';
   return(
     <div>
       <section className='intro'>
@@ -17,8 +18,8 @@ const Home = () =>{
           <div className='card-body'>
             <h3 className='card-title text-center' style={{color:'#fff'}}>Watch Live</h3>
             <div className='embed-responsive embed-responsive-21by9'>
-              <iframe src="https://www.youtube.com/embed/e7B2i7JgJzg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title='one24'></iframe>
-          
+              <iframe src={video} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title='liveVideo'></iframe>
+
             </div>
           </div>
         </div>
