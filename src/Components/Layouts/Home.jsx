@@ -2,7 +2,9 @@ import React from 'react';
 import './main.css';
 
 const Home = () =>{
-  const video = 'https://www.youtube.com/embed/uiqCu9_Hv6s';
+
+  const video = 'https://www.youtube.com/embed/u66-QQ8f7YQ';  
+
   return(
     <div>
       <section className='intro'>
