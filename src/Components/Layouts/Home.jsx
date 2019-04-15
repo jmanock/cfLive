@@ -3,7 +3,7 @@ import './main.css';
 
 const Home = () =>{
 
-  const video = 'https://www.youtube.com/embed/YI_kGDmDnSc';
+  const video = 'https://www.youtube.com/embed/Ofx6dt2myqg';
 
   return(
     <div>
